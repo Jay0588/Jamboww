@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Jambo Wood Works Ltd</title>
+    <link rel="icon" type="image/png" href="assets/images/jambo-logo-2024.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+        background: #0d0a07;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 24px;
+        text-align: center;
+      }
+      .logo-wrap {
+        width: 80px; height: 80px;
+        border-radius: 50%;
+        background: rgba(201,146,58,0.1);
+        border: 2px solid rgba(201,146,58,0.3);
+        display: grid; place-items: center;
+        margin: 0 auto 28px;
+      }
+      .logo-wrap img { width: 70px; height: 70px; object-fit: contain; }
+      .code {
+        font-family: 'Syne', system-ui, sans-serif;
+        font-size: clamp(5rem, 15vw, 10rem);
+        font-weight: 800;
+        line-height: 1;
+        color: #edc06a;
+        letter-spacing: -0.04em;
+        margin: 0 0 12px;
+      }
+      h1 {
+        font-family: 'Syne', system-ui, sans-serif;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        font-weight: 700;
+        margin: 0 0 12px;
+        color: #fff;
+      }
+      p {
+        color: rgba(255,255,255,0.55);
+        font-size: 1rem;
+        line-height: 1.65;
+        max-width: 400px;
+        margin: 0 auto 32px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        height: 44px;
+        padding: 0 20px;
+        border-radius: 8px;
+        font-size: 0.86rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: filter 160ms, transform 160ms;
+      }
+      .links a:first-child {
+        background: linear-gradient(135deg, #edc06a, #c9923a);
+        color: #0d0a07;
+      }
+      .links a:not(:first-child) {
+        border: 1px solid rgba(255,255,255,0.18);
+        color: rgba(255,255,255,0.75);
+        background: rgba(255,255,255,0.05);
+      }
+      .links a:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    </style>
+  </head>
+  <body>
+    <div class="logo-wrap">
+      <img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" />
+    </div>
+    <p class="code">404</p>
+    <h1>Page not found.</h1>
+    <p>The page you're looking for doesn't exist or may have moved. Head back and find what you need.</p>
+    <div class="links">
+      <a href="index.html">Go Home</a>
+      <a href="hardware.html">Hardware</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </body>
+</html>
