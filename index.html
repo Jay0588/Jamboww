@@ -121,13 +121,26 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu" data-mobile-menu>
+      <div class="mobile-menu-lang">
+        <div class="nav-translate" data-translate-wrap>
+          <button class="nav-translate-btn" data-translate-toggle aria-label="Translate">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span data-translate-target>EN</span>
+            <svg class="tl-btn-chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-translate-dropdown" data-translate-dropdown hidden>
+            <button class="tl-opt tl-active" data-lang="en"><span class="tl-flag">🇬🇧</span><span class="tl-name">English</span><span class="tl-code">EN</span></button>
+            <button class="tl-opt" data-lang="sw"><span class="tl-flag">🇰🇪</span><span class="tl-name">Kiswahili</span><span class="tl-code">SWA</span></button>
+          </div>
+        </div>
+      </div>
       <nav aria-label="Mobile navigation">
-        <a href="index.html">Home</a>
-        <a href="hardware.html">Hardware</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="hardware.html" data-i18n="nav-hardware">Hardware</a>
+        <a href="projects.html" data-i18n="nav-projects">Projects</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="mobile-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer">Get a Quote</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
+        <a class="mobile-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer" data-i18n="nav-cta">Get a Quote</a>
       </nav>
     </div>
 
