@@ -544,3 +544,102 @@ h3 {
   font-weight: 700;
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
+
+/* ================================================================
+   INNER PAGES — MOBILE (all inner pages: hardware, projects, about, contact)
+   ================================================================ */
+@media (max-width: 960px) {
+
+  /* Overflow safety for all inner pages */
+  .hw-inner, .proj-page-inner, .about-page-inner,
+  .contact-page-inner, .page-cta-inner { padding-left: 16px; padding-right: 16px; }
+
+  /* Page hero */
+  .page-hero {
+    min-height: 280px;
+    padding: 90px 16px 32px;
+  }
+  .page-hero-inner h1 { font-size: clamp(1.9rem, 7vw, 2.8rem); }
+  .page-hero-inner p  { font-size: 0.88rem; }
+  .page-hero-inner .btn { width: 100%; max-width: 300px; }
+
+  /* Hardware */
+  .hw-categories { padding: 32px 0; }
+  .hw-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hw-card { grid-template-rows: 160px 1fr; border-radius: 14px; }
+  .hw-card-body { padding: 14px; gap: 8px; }
+  .hw-card-body h3 { font-size: 0.94rem; }
+  .hw-card-body p  { font-size: 0.8rem; }
+  .hw-brands { padding: 28px 0; }
+  .hw-brand-logos { gap: 12px; }
+  .hw-brand-logos img { height: 38px; max-width: 90px; }
+
+  /* Projects */
+  .proj-page-section { padding: 32px 0; }
+  .proj-filters { gap: 6px; margin-bottom: 20px; }
+  .proj-filter { height: 32px; padding: 0 12px; font-size: 0.75rem; }
+  .proj-masonry { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .proj-item-info { opacity: 1; transform: none; padding: 12px; }
+  .proj-cat { font-size: 0.62rem; padding: 3px 8px; }
+  .proj-item-info p { font-size: 0.72rem; }
+
+  /* About page */
+  .about-page-story { padding: 36px 0; }
+  .about-page-story .about-page-inner { grid-template-columns: 1fr; gap: 24px; }
+  .about-page-text h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .about-page-text p  { font-size: 0.86rem; }
+  .about-page-imgs { display: none; }
+  .about-services-section { padding: 32px 0; }
+  .about-services-section h2 { font-size: clamp(1.5rem, 5.5vw, 2rem); margin-bottom: 20px; }
+  .about-svc-list { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .about-svc-item { padding: 16px; gap: 10px; border-radius: 14px; }
+  .about-svc-item h3 { font-size: 0.9rem; }
+  .about-svc-item p  { font-size: 0.8rem; }
+  .about-stats-section { padding: 24px 16px; }
+  .about-stats-inner { flex-wrap: wrap; gap: 2px; }
+  .about-stat { flex: 1 1 calc(50% - 2px); padding: 18px 12px; min-width: 0; }
+  .about-stat strong { font-size: clamp(1.6rem, 5vw, 2rem); }
+
+  /* Contact page */
+  .contact-page-hero { padding: 90px 16px 32px; }
+  .contact-page-hero-inner h1 { font-size: clamp(1.9rem, 7vw, 2.8rem); }
+  .contact-page-hero-inner p  { font-size: 0.88rem; }
+  .contact-page-body { padding: 32px 0; }
+  .contact-page-inner { grid-template-columns: 1fr; gap: 24px; padding: 0 16px; }
+  .contact-page-details { gap: 8px; }
+  .contact-detail { padding: 11px 12px; }
+  .contact-page-map { height: 200px; border-radius: 14px; }
+  .contact-form-wrap { padding: 20px 16px; border-radius: 18px; }
+  .contact-form-wrap h3 { font-size: 1.2rem; }
+  .contact-form-wrap .form-row { grid-template-columns: 1fr; gap: 12px; }
+  .contact-form-wrap .form-submit { width: 100%; }
+
+  /* CTA section */
+  .page-cta { padding: 40px 16px; }
+  .page-cta-inner h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .page-cta-inner p  { font-size: 0.88rem; }
+  .page-cta-btns { flex-direction: column; align-items: stretch; gap: 10px; }
+  .page-cta-btns .btn { width: 100%; max-width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .page-hero { padding: 80px 14px 24px; }
+  .page-hero-inner h1 { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+
+  /* Hardware single col */
+  .hw-grid { grid-template-columns: 1fr; gap: 10px; }
+  .hw-card { grid-template-rows: 180px 1fr; }
+
+  /* Projects single col */
+  .proj-masonry { grid-template-columns: 1fr; gap: 10px; }
+  .proj-item { aspect-ratio: 16/10; }
+
+  /* About services single col */
+  .about-svc-list { grid-template-columns: 1fr; gap: 8px; }
+  .about-svc-item { padding: 14px; }
+
+  /* Contact */
+  .contact-page-hero { padding: 80px 14px 24px; }
+  .contact-page-inner { padding: 0 14px; }
+  .contact-form-wrap { padding: 16px 12px; }
+}

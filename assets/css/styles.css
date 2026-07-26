@@ -320,37 +320,105 @@ h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spac
 .menu-open .menu-toggle span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); width: 16px; }
 .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-5.5px) rotate(-45deg); width: 16px; margin-left: 0; }
 
-/* Mobile overlay */
+/* Mobile menu — matches screenshot: brand top-left, X top-right, centered nav, full CTA bottom */
 .mobile-menu {
   position: fixed; z-index: 190; inset: 0;
-  display: grid; place-items: center;
-  background: rgba(6,4,2,0.97); backdrop-filter: blur(28px);
-  opacity: 0; pointer-events: none; transform: translateY(-8px);
-  transition: opacity 220ms ease, transform 220ms ease; color: #fff;
+  display: flex; flex-direction: column;
+  background: #0e0b08;
+  opacity: 0; pointer-events: none; transform: translateX(100%);
+  transition: opacity 260ms ease, transform 300ms cubic-bezier(0.76,0,0.24,1);
+  color: #fff; overflow: hidden;
 }
 .menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: none; }
-.mobile-menu nav {
-  display: grid; gap: 2px; text-align: center;
-  width: min(100%, 380px); padding: 0 24px;
+
+/* Top bar */
+.mm-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
 }
-.mobile-menu nav a {
+.mm-brand {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.mm-brand img {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; padding: 3px; object-fit: contain; flex-shrink: 0;
+}
+.mm-brand div { display: grid; line-height: 1.25; }
+.mm-brand strong {
   font-family: 'Syne', system-ui, sans-serif;
-  font-size: 2rem; font-weight: 700; color: rgba(255,255,255,0.68);
-  padding: 10px; border-radius: 10px;
+  font-size: 0.9rem; font-weight: 800; color: #fff;
+}
+.mm-brand small {
+  font-size: 0.58rem; color: var(--gold);
+  letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+}
+.mm-close {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  border: 1.5px solid rgba(255,255,255,0.18); border-radius: 50%;
+  background: rgba(255,255,255,0.06); color: #fff; cursor: pointer;
+  transition: background 160ms; flex-shrink: 0;
+}
+.mm-close:hover { background: rgba(255,255,255,0.14); }
+
+/* Language toggle */
+.mm-lang {
+  padding: 12px 20px 0;
+  flex-shrink: 0;
+}
+.mm-lang-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 30px; padding: 0 12px;
+  border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;
+  background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7);
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  cursor: pointer; transition: background 160ms, color 160ms;
+}
+.mm-lang-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.mm-lang-btn svg:first-child { color: var(--gold); }
+
+/* Nav links — centered, large */
+.mm-nav {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; flex: 1;
+  padding: 0 24px; gap: 0;
+}
+.mm-nav a {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: clamp(1.9rem, 7vw, 2.6rem);
+  font-weight: 700; color: rgba(255,255,255,0.55);
+  padding: 10px 20px; text-align: center; width: 100%;
+  border-radius: 10px; letter-spacing: -0.01em;
   transition: color 160ms, background 160ms;
+  text-decoration: none; display: block;
 }
-.mobile-menu nav a:hover { color: var(--gold-light); background: rgba(255,255,255,0.05); }
-.mobile-cta {
-  margin-top: 16px; padding: 14px 28px; border-radius: 999px;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  font-size: 0.9rem !important; font-weight: 700 !important;
-  color: #0d0a07 !important;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold)) !important;
+.mm-nav a:hover, .mm-nav a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
 }
+.mm-nav a.active { color: var(--gold-light); }
 
-/* Nav phone/divider -- hidden by default (not in pill nav) */
+/* Bottom CTA */
+.mm-footer {
+  padding: 16px 20px 32px; flex-shrink: 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.mm-cta {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 54px; border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem; font-weight: 800; color: #0d0a07;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  box-shadow: 0 8px 28px rgba(201,146,58,0.35); text-decoration: none;
+  transition: filter 160ms, transform 160ms;
+}
+.mm-cta:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+/* Keep old classes working if referenced anywhere */
+.mobile-cta { display: none; }
 .nav-phone, .nav-divider { display: none; }
-
 /* ================================================================
    WORKSHOP â€” cinematic 1-photo slideshow / HERO
    ================================================================ */
@@ -1633,6 +1701,13 @@ a.contact-detail:hover {
 }
 
 .scroll-top.is-visible { opacity: 1; pointer-events: auto; transform: none; }
+
+/* ================================================================
+   OVERFLOW SAFETY
+   ================================================================ */
+html, body { max-width: 100%; overflow-x: hidden; }
+.ws-slide-content, .ws-hero-actions, .contact-inner, .about-inner, .footer-inner { min-width: 0; }
+.btn-gold-hero, .btn-outline-hero { min-width: 0; white-space: normal; text-align: center; }
 
 /* ================================================================
    RESPONSIVE
@@ -3116,16 +3191,6 @@ html { scroll-behavior: smooth; }
 .reviews-section { background: #fff; }
 .about-section   { background: #f8f3ec; }
 .projects-section { background: #0b0806; }
-
-/* ── 19. Mobile nav overlay — full-height with brand ── */
-.mobile-menu {
-  background: linear-gradient(160deg, #0b0806, #1a0e06) !important;
-}
-
-.mobile-menu nav a {
-  font-size: 1.9rem !important;
-  letter-spacing: -0.02em !important;
-}
 
 /* ── 20. Marquee brand tiles — paper bg section ── */
 .brands {

@@ -7,16 +7,17 @@ window.addEventListener("DOMContentLoaded", () => {
      ================================================================ */
 
   /* ================================================================
-     TRANSLATE — single toggle EN ↔ Kiswahili
-     Shows the language you'll switch TO on the button
+     TRANSLATE — works on ALL toggle buttons (desktop + mobile)
      ================================================================ */
-  const translateToggle = document.querySelector("[data-translate-toggle]");
-  const translateTarget = document.querySelector("[data-translate-target]");
-  // Read persisted language — default EN
+  const translateToggles = document.querySelectorAll("[data-translate-toggle]");
+  const translateTargets = document.querySelectorAll("[data-translate-target]");
   let currentLang = "en";
   try { currentLang = localStorage.getItem("jww-lang") || "en"; } catch(e) {}
-  // Set button label immediately before DOM swap runs
-  if (translateTarget) translateTarget.textContent = currentLang === "sw" ? "ENGLISH" : "SWAHILI";
+
+  const setLabels = (lang) => {
+    translateTargets.forEach(t => { t.textContent = lang === "sw" ? "EN" : "SW"; });
+  };
+  setLabels(currentLang);
 
   const SW = {
     "nav-home":"Nyumbani","nav-hardware":"Vifaa","nav-projects":"Miradi",
@@ -125,22 +126,19 @@ window.addEventListener("DOMContentLoaded", () => {
       const key = el.dataset.i18n;
       el.innerHTML = map ? (map[key] ?? el.dataset.en) : (el.dataset.en ?? el.innerHTML);
     });
-    if (translateTarget) translateTarget.textContent = lang === "sw" ? "ENGLISH" : "SWAHILI";
+    setLabels(lang);
     currentLang = lang;
     document.documentElement.lang = lang === "sw" ? "sw" : "en";
-    translateToggle?.setAttribute("aria-label", lang === "sw" ? "Switch to English" : "Translate to Swahili");
-    // Persist across pages
     try { localStorage.setItem("jww-lang", lang); } catch(e) {}
   };
 
-  // Auto-apply saved language on every page load
   try {
     const saved = localStorage.getItem("jww-lang");
     if (saved && saved !== "en") applyLang(saved);
   } catch(e) {}
 
-  translateToggle?.addEventListener("click", () => {
-    applyLang(currentLang === "en" ? "sw" : "en");
+  translateToggles.forEach(btn => {
+    btn.addEventListener("click", () => applyLang(currentLang === "en" ? "sw" : "en"));
   });
 
   /* ================================================================
@@ -164,19 +162,23 @@ window.addEventListener("DOMContentLoaded", () => {
   /* ================================================================
      MOBILE MENU
      ================================================================ */
-  const menuToggle = document.querySelector("[data-menu-toggle]");
-  const mobileMenu = document.querySelector("[data-mobile-menu]");
+  const menuToggles = document.querySelectorAll("[data-menu-toggle]");
+  const mobileMenu  = document.querySelector("[data-mobile-menu]");
 
-  menuToggle?.addEventListener("click", () => {
-    const open = document.body.classList.toggle("menu-open");
-    menuToggle.setAttribute("aria-expanded", String(open));
+  const closeMenu = () => {
+    document.body.classList.remove("menu-open");
+    menuToggles.forEach(t => t.setAttribute("aria-expanded", "false"));
+  };
+
+  menuToggles.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const isOpen = document.body.classList.toggle("menu-open");
+      menuToggles.forEach(t => t.setAttribute("aria-expanded", String(isOpen)));
+    });
   });
 
   mobileMenu?.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
-      document.body.classList.remove("menu-open");
-      menuToggle?.setAttribute("aria-expanded", "false");
-    }
+    if (e.target.tagName === "A") closeMenu();
   });
 
   scrollTopBtn?.addEventListener("click", () =>
