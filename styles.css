@@ -42,12 +42,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Prevent white flash between navbar and hero on homepage */
-main:first-child,
-.workshop:first-child {
-  margin-top: 0;
-}
-
 body.menu-open { overflow: hidden; }
 
 a { color: inherit; text-decoration: none; }
@@ -326,42 +320,105 @@ h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spac
 .menu-open .menu-toggle span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); width: 16px; }
 .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-5.5px) rotate(-45deg); width: 16px; margin-left: 0; }
 
-/* Mobile overlay */
+/* Mobile menu — matches screenshot: brand top-left, X top-right, centered nav, full CTA bottom */
 .mobile-menu {
   position: fixed; z-index: 190; inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  background: rgba(6,4,2,0.97); backdrop-filter: blur(28px);
-  opacity: 0; pointer-events: none; transform: translateY(-8px);
-  transition: opacity 220ms ease, transform 220ms ease; color: #fff;
-  padding: 24px;
+  display: flex; flex-direction: column;
+  background: #0e0b08;
+  opacity: 0; pointer-events: none; transform: translateX(100%);
+  transition: opacity 260ms ease, transform 300ms cubic-bezier(0.76,0,0.24,1);
+  color: #fff; overflow: hidden;
 }
 .menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: none; }
-.mobile-menu nav {
-  display: grid; gap: 2px; text-align: center;
-  width: min(100%, 380px); padding: 0 24px;
+
+/* Top bar */
+.mm-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  flex-shrink: 0;
 }
-.mobile-menu nav a {
+.mm-brand {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.mm-brand img {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; padding: 3px; object-fit: contain; flex-shrink: 0;
+}
+.mm-brand div { display: grid; line-height: 1.25; }
+.mm-brand strong {
   font-family: 'Syne', system-ui, sans-serif;
-  font-size: 2rem; font-weight: 700; color: rgba(255,255,255,0.68);
-  padding: 10px; border-radius: 10px;
+  font-size: 0.9rem; font-weight: 800; color: #fff;
+}
+.mm-brand small {
+  font-size: 0.58rem; color: var(--gold);
+  letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+}
+.mm-close {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  border: 1.5px solid rgba(255,255,255,0.18); border-radius: 50%;
+  background: rgba(255,255,255,0.06); color: #fff; cursor: pointer;
+  transition: background 160ms; flex-shrink: 0;
+}
+.mm-close:hover { background: rgba(255,255,255,0.14); }
+
+/* Language toggle */
+.mm-lang {
+  padding: 12px 20px 0;
+  flex-shrink: 0;
+}
+.mm-lang-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 30px; padding: 0 12px;
+  border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;
+  background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.7);
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  cursor: pointer; transition: background 160ms, color 160ms;
+}
+.mm-lang-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.mm-lang-btn svg:first-child { color: var(--gold); }
+
+/* Nav links — centered, large */
+.mm-nav {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; flex: 1;
+  padding: 0 24px; gap: 0;
+}
+.mm-nav a {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: clamp(1.9rem, 7vw, 2.6rem);
+  font-weight: 700; color: rgba(255,255,255,0.55);
+  padding: 10px 20px; text-align: center; width: 100%;
+  border-radius: 10px; letter-spacing: -0.01em;
   transition: color 160ms, background 160ms;
+  text-decoration: none; display: block;
 }
-.mobile-menu nav a:hover { color: var(--gold-light); background: rgba(255,255,255,0.05); }
-.mobile-cta {
-  margin-top: 16px; padding: 14px 28px; border-radius: 999px;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  font-size: 0.9rem !important; font-weight: 700 !important;
-  color: #0d0a07 !important;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold)) !important;
+.mm-nav a:hover, .mm-nav a.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
 }
+.mm-nav a.active { color: var(--gold-light); }
 
-/* Nav phone/divider -- hidden by default (not in pill nav) */
+/* Bottom CTA */
+.mm-footer {
+  padding: 16px 20px 32px; flex-shrink: 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.mm-cta {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 54px; border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem; font-weight: 800; color: #0d0a07;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  box-shadow: 0 8px 28px rgba(201,146,58,0.35); text-decoration: none;
+  transition: filter 160ms, transform 160ms;
+}
+.mm-cta:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+/* Keep old classes working if referenced anywhere */
+.mobile-cta { display: none; }
 .nav-phone, .nav-divider { display: none; }
-
 /* ================================================================
    WORKSHOP â€” cinematic 1-photo slideshow / HERO
    ================================================================ */
@@ -717,6 +774,21 @@ h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spac
 }
 
 /* ================================================================
+   CONTROLS
+   ================================================================ */
+.ws-controls {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px clamp(20px, 5vw, 72px) 28px;
+  background: #0d0a07;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ================================================================
    CONTROLS — dots + progress only, no arrows
    ================================================================ */
 .ws-controls {
@@ -727,8 +799,7 @@ h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spac
   align-items: center;
   gap: 10px;
   padding: 14px clamp(20px, 5vw, 72px) 18px;
-  background: #0b0806;
-  flex-shrink: 0;
+  background: #0d0a07;
 }
 
 .ws-dots {
@@ -1630,6 +1701,13 @@ a.contact-detail:hover {
 }
 
 .scroll-top.is-visible { opacity: 1; pointer-events: auto; transform: none; }
+
+/* ================================================================
+   OVERFLOW SAFETY
+   ================================================================ */
+html, body { max-width: 100%; overflow-x: hidden; }
+.ws-slide-content, .ws-hero-actions, .contact-inner, .about-inner, .footer-inner { min-width: 0; }
+.btn-gold-hero, .btn-outline-hero { min-width: 0; white-space: normal; text-align: center; }
 
 /* ================================================================
    RESPONSIVE
@@ -3114,274 +3192,7 @@ html { scroll-behavior: smooth; }
 .about-section   { background: #f8f3ec; }
 .projects-section { background: #0b0806; }
 
-/* ── 19. Mobile nav overlay — full-height with brand ── */
-.mobile-menu {
-  background: linear-gradient(160deg, #0b0806, #1a0e06) !important;
-}
-
-.mobile-menu nav a {
-  font-size: 1.9rem !important;
-  letter-spacing: -0.02em !important;
-}
-
 /* ── 20. Marquee brand tiles — paper bg section ── */
 .brands {
   background: #fdf8f2 !important;
 }
-
-/* ================================================================
-   MOBILE UI — purpose-built, not just shrunk desktop
-   ================================================================ */
-
-/* ═══════════════════════════════════════════════════════════════
-   NAVBAR < 960px
-   ═══════════════════════════════════════════════════════════════ */
-@media (max-width: 960px) {
-  .site-header {
-    top: 10px; left: 10px; right: 10px;
-    min-height: 54px;
-    padding: 0 4px 0 0;
-    border-radius: 16px;
-  }
-  .brand { padding: 6px 14px 6px 8px; gap: 8px; }
-  .brand-logo-wrap { width: 32px; height: 32px; }
-  .brand-logo-wrap img { width: 28px; height: 28px; }
-  .brand-text strong { font-size: 0.78rem; }
-  .brand-text small  { font-size: 0.48rem; }
-  .menu-toggle { width: 36px; height: 36px; margin-right: 4px; }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   HERO < 960px — portrait-first layout
-   ═══════════════════════════════════════════════════════════════ */
-@media (max-width: 960px) {
-  /* Full-width slide content, text top, badge bottom */
-  .ws-slide-content {
-    padding: 0 20px 20px !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-end !important;
-    gap: 14px !important;
-    margin-top: auto;
-  }
-
-  .ws-slide-left { max-width: 100%; }
-
-  .ws-slide-content h2 {
-    font-size: clamp(1.9rem, 6.5vw, 2.6rem) !important;
-    margin: 4px 0 10px !important;
-    line-height: 1.04 !important;
-  }
-
-  .ws-slide-content p:not(.label) {
-    font-size: 0.84rem !important;
-    line-height: 1.6 !important;
-    max-width: 100% !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* Right panel becomes a horizontal action strip */
-  .ws-slide-right {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding: 12px !important;
-    border-radius: 12px !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    align-items: center !important;
-    background: rgba(8,5,2,0.7) !important;
-  }
-
-  .ws-hero-actions {
-    flex-direction: row !important;
-    gap: 8px !important;
-    flex: 1 !important;
-    min-width: 0;
-  }
-
-  .btn-gold-hero, .btn-outline-hero {
-    flex: 1 !important;
-    height: 38px !important;
-    font-size: 0.76rem !important;
-    padding: 0 12px !important;
-  }
-
-  /* Stats hide on tablet — too cramped */
-  .ws-stats { display: none !important; }
-
-  /* Badge stays, smaller */
-  .ws-slide-badge {
-    width: 100% !important;
-    padding: 8px 10px !important;
-    border-radius: 8px !important;
-  }
-  .ws-slide-badge span { font-size: 0.66rem !important; }
-  .ws-slide-badge svg { display: none; }
-
-  .ws-controls { padding: 10px 20px 14px !important; gap: 8px !important; }
-
-  /* Award strip compact */
-  .award-strip { padding-left: 16px !important; padding-right: 16px !important; }
-  .award-strip-inner { gap: 10px; padding: 10px 0; }
-  .award-badge { display: none; }
-  .award-copy strong { font-size: 0.78rem !important; }
-  .award-copy span { font-size: 0.7rem !important; }
-
-  /* Brands — slimmer tiles */
-  .brands { padding: 36px 0 !important; }
-  .brands-inner { padding: 0 18px !important; margin-bottom: 22px; }
-  .brands-head { margin-bottom: 22px !important; }
-  .brands-head h2 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
-  .brand-tile { width: 150px !important; padding: 16px 12px 12px !important; gap: 8px !important; border-radius: 12px !important; }
-  .brand-tile-logo { height: 52px !important; }
-  .brand-tile-logo img { height: 46px !important; }
-  .brand-tile > span { font-size: 0.68rem !important; }
-
-  /* Why us — 2 col */
-  .why-us { padding: 44px 18px !important; }
-  .why-head h2 { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .why-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
-  .why-card { padding: 18px 16px !important; gap: 10px !important; border-radius: 14px !important; }
-  .why-icon { width: 38px !important; height: 38px !important; border-radius: 10px !important; }
-  .why-card h3 { font-size: 0.88rem !important; }
-  .why-card p { font-size: 0.8rem !important; line-height: 1.55 !important; }
-
-  /* About — stacked, image visible */
-  .about-section { padding: 44px 18px !important; }
-  .about-inner { grid-template-columns: 1fr !important; gap: 28px !important; }
-  .about-image-stack { display: block !important; }
-  .about-img-main img { height: 240px !important; border-radius: 14px !important; object-fit: cover; object-position: center 30%; }
-  .about-img-badge { display: none !important; }
-  .about-copy h2 { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .about-copy p { font-size: 0.86rem !important; margin-bottom: 12px !important; }
-  .about-award { padding: 12px !important; border-radius: 10px !important; }
-  .about-award-logo { width: 40px !important; height: 40px !important; }
-  .about-tags { gap: 5px !important; margin-top: 18px !important; }
-  .about-tags span { height: 28px !important; padding: 0 10px !important; font-size: 0.7rem !important; }
-
-  /* Reviews — horizontal scroll on mobile instead of single col */
-  .reviews-section { padding: 44px 0 44px 18px !important; overflow: hidden; }
-  .reviews-inner { padding-right: 0 !important; }
-  .reviews-head { padding-right: 18px !important; flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; margin-bottom: 24px !important; }
-  .reviews-head h2 { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .reviews-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 12px !important;
-    padding-right: 18px !important;
-    scrollbar-width: none !important;
-    -webkit-overflow-scrolling: touch;
-  }
-  .reviews-grid::-webkit-scrollbar { display: none; }
-  .review-card {
-    flex: 0 0 85vw !important;
-    max-width: 320px !important;
-    scroll-snap-align: start !important;
-    padding: 18px !important;
-    border-radius: 14px !important;
-  }
-  .reviews-footer { padding-right: 18px !important; }
-  .reviews-view-more { width: 100% !important; justify-content: center !important; }
-
-  /* Projects — horizontal scroll */
-  .projects-section { padding: 44px 0 44px 18px !important; }
-  .projects-inner { padding-right: 0 !important; }
-  .projects-head { flex-direction: column !important; gap: 10px !important; margin-bottom: 20px !important; padding-right: 18px !important; }
-  .projects-head h2 { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .projects-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 12px !important;
-    padding-right: 18px !important;
-    scrollbar-width: none !important;
-    grid-template-columns: unset !important;
-    grid-template-rows: unset !important;
-    height: auto !important;
-  }
-  .projects-grid::-webkit-scrollbar { display: none; }
-  .proj-card {
-    flex: 0 0 75vw !important;
-    max-width: 280px !important;
-    height: 240px !important;
-    scroll-snap-align: start !important;
-    border-radius: 14px !important;
-  }
-  .proj-large { flex: 0 0 85vw !important; max-width: 320px !important; height: 280px !important; grid-column: auto !important; grid-row: auto !important; }
-  .proj-overlay { opacity: 1 !important; transform: none !important; }
-  .projects-cta { margin-top: 24px !important; padding-right: 18px !important; }
-  .btn-projects-more { width: 100% !important; justify-content: center !important; }
-
-  /* Contact — stacked */
-  .contact-section { padding: 44px 18px !important; }
-  .contact-inner { grid-template-columns: 1fr !important; gap: 32px !important; }
-  .contact-copy h2 { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .contact-copy > p { font-size: 0.86rem !important; }
-  .contact-details { gap: 8px !important; }
-  .contact-detail { padding: 11px 14px !important; border-radius: 10px !important; }
-  .contact-form-wrap { padding: 18px 16px !important; border-radius: 14px !important; }
-  .form-row { grid-template-columns: 1fr !important; }
-  .form-group input, .form-group textarea, .form-group select {
-    padding: 12px 14px !important; font-size: 0.88rem !important; border-radius: 8px !important;
-  }
-  .form-submit { height: 50px !important; font-size: 0.9rem !important; border-radius: 10px !important; }
-  .form-note { font-size: 0.7rem !important; }
-
-  /* Footer */
-  .footer-inner { grid-template-columns: 1fr !important; gap: 28px !important; padding: 0 18px 32px !important; }
-  .site-footer { padding-top: 36px !important; }
-  .footer-brand { margin-bottom: 14px !important; }
-  .footer-brand img { width: 40px !important; height: 40px !important; }
-  .footer-brand strong { font-size: 0.88rem !important; }
-  .footer-links-col, .footer-contact-col { gap: 8px !important; }
-  .footer-links-col a, .footer-contact-col a { font-size: 0.86rem !important; }
-  .footer-map { height: 160px !important; border-radius: 12px !important; }
-  .footer-bottom {
-    flex-direction: column !important; text-align: center !important;
-    gap: 4px !important; padding: 14px 18px !important; font-size: 0.72rem !important;
-  }
-  .socials { gap: 8px !important; }
-  .socials a { width: 36px !important; height: 36px !important; }
-
-  /* Floating */
-  .whatsapp-float { width: 48px !important; height: 48px !important; right: 14px !important; bottom: 14px !important; }
-  .scroll-top { width: 36px !important; height: 36px !important; right: 16px !important; bottom: 72px !important; }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   PHONE < 480px — tightest layout
-   ═══════════════════════════════════════════════════════════════ */
-@media (max-width: 480px) {
-  .site-header { top: 8px; left: 8px; right: 8px; }
-  .brand-text strong { font-size: 0.72rem; }
-  .brand-text small  { display: none; }
-
-  h1 { font-size: clamp(2.2rem, 9.5vw, 2.8rem) !important; }
-  h2 { font-size: clamp(1.6rem, 8vw, 2rem) !important; }
-
-  .ws-slide-content h2 { font-size: clamp(1.7rem, 7vw, 2.2rem) !important; }
-  .ws-hero-actions { flex-direction: column !important; }
-  .btn-gold-hero, .btn-outline-hero { width: 100% !important; height: 42px !important; }
-
-  .why-grid { grid-template-columns: 1fr !important; }
-  .why-card { flex-direction: row !important; align-items: flex-start !important; padding: 16px !important; }
-  .why-icon { flex-shrink: 0 !important; margin-top: 2px; }
-
-  .review-card { flex: 0 0 92vw !important; max-width: 340px !important; }
-  .proj-card { flex: 0 0 88vw !important; max-width: 300px !important; }
-  .proj-large { flex: 0 0 92vw !important; max-width: 340px !important; }
-
-  .about-img-main img { height: 200px !important; }
-}
-/* Fix ws-slides height — account for controls bar properly */
-.ws-slides {
-  height: calc(100% - 60px) !important;
-}
-
