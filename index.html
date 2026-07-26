@@ -24,7 +24,7 @@
     <!-- Google Analytics — replace GA_MEASUREMENT_ID with your ID e.g. G-XXXXXXXXXX -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=6" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -707,7 +707,7 @@
       </section>
 
       <!-- ============================================================
-           FEATURED PROJECTS
+           FEATURED PROJECTS — dual marquee rows
            ============================================================ -->
       <section class="projects-section" id="projects">
         <div class="projects-inner">
@@ -722,55 +722,99 @@
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
+        </div>
 
-          <div class="projects-grid">
-            <a class="proj-card proj-large" href="projects.html">
-              <img src="assets/images/project-interior.png" alt="Kitchen cabinet installation" loading="lazy" />
-              <div class="proj-overlay">
-                <span class="proj-tag">Kitchen Cabinetry</span>
-                <p>Full kitchen fit-out including upper and lower cabinets, handles, and countertop.</p>
-              </div>
+        <!-- Row 1 — scrolls RIGHT -->
+        <div class="proj-marquee-row">
+          <div class="proj-marquee-track proj-marquee-right">
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-interior.png" alt="Kitchen cabinetry" loading="lazy" />
             </a>
-
-            <a class="proj-card" href="projects.html">
-              <img src="assets/images/project-door-2.png" alt="Built-in wardrobe" loading="lazy" />
-              <div class="proj-overlay">
-                <span class="proj-tag">Wardrobes</span>
-                <p>Floor-to-ceiling built-in wardrobe with sliding doors.</p>
-              </div>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-door-1.png" alt="Custom door" loading="lazy" />
             </a>
-
-            <a class="proj-card" href="projects.html">
-              <img src="assets/images/project-interior.png" alt="Interior wood panelling" loading="lazy" />
-              <div class="proj-overlay">
-                <span class="proj-tag">Interior Fit-Out</span>
-                <p>Wood panelling and shelving for a commercial reception area.</p>
-              </div>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-door-2.png" alt="Wardrobes" loading="lazy" />
             </a>
-
-            <a class="proj-card" href="projects.html">
-              <img src="assets/images/project-design-1.png" alt="TV unit and shelving" loading="lazy" />
-              <div class="proj-overlay">
-                <span class="proj-tag">TV Unit & Shelving</span>
-                <p>Custom TV unit with floating shelves and hidden cable routing.</p>
-              </div>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-design-1.png" alt="TV unit" loading="lazy" />
             </a>
-
-            <a class="proj-card" href="projects.html">
-              <img src="assets/images/project-design-2.png" alt="Office desk and storage" loading="lazy" />
-              <div class="proj-overlay">
-                <span class="proj-tag">Office Furniture</span>
-                <p>L-shaped desk with integrated shelving for a home office.</p>
-              </div>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-stairs.png" alt="Staircase" loading="lazy" />
             </a>
-          </div>
-
-          <div class="projects-cta">
-            <a class="btn-projects-more" href="projects.html">
-              See All Projects
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-patio.png" alt="Patio" loading="lazy" />
+            </a>
+            <!-- duplicate set for seamless loop -->
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-interior.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-door-1.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-door-2.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-design-1.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-stairs.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-patio.png" alt="" loading="lazy" />
             </a>
           </div>
+        </div>
+
+        <!-- Row 2 — scrolls LEFT -->
+        <div class="proj-marquee-row">
+          <div class="proj-marquee-track proj-marquee-left">
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-design-2.png" alt="Office furniture" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/project-door-3.png" alt="Custom door" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/cnc-2.jpg" alt="CNC routing" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/cnc-5.jpg" alt="CNC panels" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/workshop-2.jpg" alt="Workshop" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html">
+              <img src="assets/images/cnc-4.jpg" alt="Steel profiles" loading="lazy" />
+            </a>
+            <!-- duplicate set -->
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-design-2.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/project-door-3.png" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/cnc-2.jpg" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/cnc-5.jpg" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/workshop-2.jpg" alt="" loading="lazy" />
+            </a>
+            <a class="proj-tile" href="projects.html" aria-hidden="true">
+              <img src="assets/images/cnc-4.jpg" alt="" loading="lazy" />
+            </a>
+          </div>
+        </div>
+
+        <div class="projects-cta">
+          <a class="btn-projects-more" href="projects.html">
+            See All Projects
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
         </div>
       </section>
             <!-- ============================================================
@@ -1026,7 +1070,7 @@
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
-    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js?v=6" defer></script>
   </body>
 </html>
 
