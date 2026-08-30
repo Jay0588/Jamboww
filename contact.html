@@ -14,8 +14,8 @@
     <!-- Google Analytics — replace GA_MEASUREMENT_ID with your ID e.g. G-XXXXXXXXXX -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=28" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=28" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=29" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=29" />
   </head>
   <body>
 
@@ -221,11 +221,19 @@
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
 
-              <p class="form-note">This opens your own mail app so you can review and send. We reply within 24 hours.</p>
+              <p class="form-note">This opens Gmail in a new tab with your details filled in. We reply within 24 hours.</p>
 
               <div class="form-success" role="alert" aria-live="polite" hidden>
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Your mail app should now be open with the enquiry ready to send. If nothing happened, email us at <a href="mailto:jamboww.ltd@gmail.com">jamboww.ltd@gmail.com</a> or <a href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer">message us on WhatsApp</a>.</span>
+                <div class="form-success-body">
+                  <span data-mail-status>Gmail has opened in a new tab with your enquiry ready to send.</span>
+                  <div class="form-alt">
+                    <a class="form-alt-btn" data-mail-gmail href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jamboww.ltd@gmail.com" target="_blank" rel="noreferrer">Open Gmail</a>
+                    <a class="form-alt-btn" data-mail-app href="mailto:jamboww.ltd@gmail.com">Use my mail app</a>
+                    <button class="form-alt-btn" type="button" data-mail-copy>Copy details</button>
+                    <a class="form-alt-btn" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer">WhatsApp</a>
+                  </div>
+                </div>
               </div>
               <div class="form-error" role="alert" aria-live="polite" hidden>
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -318,7 +326,7 @@
     </button>
 
 
-    <script src="assets/js/main.js?v=28" defer></script>
+    <script src="assets/js/main.js?v=29" defer></script>
   </body>
 </html>
 
