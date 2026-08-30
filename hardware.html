@@ -1,45 +1,49 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Browse Jambo Wood Works Ltd hardware — timber, paints, adhesives, plumbing materials, tiles, construction chemicals and more in Kongowea, Mombasa." />
-    <link rel="icon" type="image/png" href="assets/images/jambo-logo-2024.png" />
+    <link rel="icon" type="image/png" href="assets/images/Logo/jambo-logo-2024.png" />
     <title>Hardware | Jambo Wood Works Ltd — Kongowea, Mombasa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <!-- Sitemap reference -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <!-- Google Analytics — replace GA_MEASUREMENT_ID with your ID e.g. G-XXXXXXXXXX -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=6" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=6" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=28" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=28" />
   </head>
   <body>
 
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="Jambo Wood Works Ltd home">
-        <span class="brand-logo-wrap"><img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" /></span>
+        <span class="brand-logo-wrap"><img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" /></span>
         <span class="brand-text"><strong>Jambo Wood Works</strong><small>Est. 1984 · Mombasa</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="hardware.html" class="active">Hardware</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="hardware.html" class="active" data-i18n="nav-hardware">Hardware</a>
+        <a href="gallery.html" data-i18n="nav-projects">Gallery</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
       </nav>
       <div class="nav-right">
-
         <div class="nav-translate" data-translate-wrap>
-          <button class="nav-translate-btn" data-translate-toggle aria-label="Translate to Swahili">
-            <svg class="tl-gt-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="currentColor"/></svg>
-            <span class="tl-btn-target" data-translate-target>SWAHILI</span>
+          <button class="nav-translate-btn" data-translate-toggle aria-label="Translate">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span data-translate-target>EN</span>
+            <svg class="tl-btn-chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
+          <div class="nav-translate-dropdown" data-translate-dropdown hidden>
+            <button class="tl-opt tl-active" data-lang="en"><span class="tl-flag">🇬🇧</span><span class="tl-name">English</span><span class="tl-code">EN</span></button>
+            <button class="tl-opt" data-lang="sw"><span class="tl-flag">🇰🇪</span><span class="tl-name">Kiswahili</span><span class="tl-code">SWA</span></button>
+          </div>
         </div>
-        <a class="nav-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer">Get a Quote</a>
+        <a class="nav-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer" data-i18n="nav-cta">Get a Quote</a>
       </div>
       <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
@@ -53,7 +57,7 @@
       <!-- Top bar: brand left, close right -->
       <div class="mm-top">
         <a class="mm-brand" href="index.html">
-          <img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works" />
+          <img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works" />
           <div>
             <strong>Jambo Wood Works</strong>
             <small>Est. 1984 · Mombasa</small>
@@ -77,7 +81,7 @@
       <nav class="mm-nav" aria-label="Mobile navigation">
         <a href="index.html" data-i18n="nav-home">Home</a>
         <a class="active" href="hardware.html" data-i18n="nav-hardware">Hardware</a>
-        <a href="projects.html" data-i18n="nav-projects">Projects</a>
+        <a href="gallery.html" data-i18n="nav-projects">Gallery</a>
         <a href="about.html">About</a>
         <a href="contact.html" data-i18n="nav-contact">Contact</a>
       </nav>
@@ -91,18 +95,166 @@
 
     <main>
       <!-- Page hero -->
-      <section class="page-hero" style="background-image:url('assets/images/workshop-1.jpg')">
-        <div class="page-hero-overlay"></div>
-        <div class="page-hero-inner">
-          <p class="label label-light" data-i18n="hw-label">Hardware Store</p>
-          <h1 data-i18n="hw-h1">What we stock.</h1>
-          <p data-i18n="hw-hero-p">Wholesale and retail — timber, paints, adhesives, plumbing, tiles, construction chemicals and more. Walk in or enquire by phone.</p>
-          <a class="btn btn-gold" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20hardware%20and%20stock." target="_blank" rel="noreferrer">Enquire About Stock</a>
+      <section class="hw-hero">
+        <div class="hw-hero-rings" aria-hidden="true"></div>
+
+        <div class="hw-hero-copy-wrap">
+          <div class="hw-hero-copy">
+            <p class="hw-hero-label" data-i18n="hw-label">Hardware Collection</p>
+            <h1 class="hw-hero-title" data-i18n="hw-h1">Hardware that<br>holds everything<br><em>together.</em></h1>
+            <span class="hw-hero-rule" aria-hidden="true"></span>
+            <p class="hw-hero-lead" data-i18n="hw-hero-p">From timber and paints to adhesives, tiles and plumbing — every line we stock is chosen for strength, durability and a finish that lasts.</p>
+
+            <ul class="hw-hero-feats">
+              <li class="hw-hero-feat">
+                <span class="hw-hero-feat-icon">
+                  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v5.5c0 4.2-2.9 7.6-7 8.5-4.1-.9-7-4.3-7-8.5V6l7-3z"/>
+                  </svg>
+                </span>
+                <strong>Wholesale &amp; Retail</strong>
+                <p>Buy one length or a full lorry load.</p>
+              </li>
+
+              <li class="hw-hero-feat">
+                <span class="hw-hero-feat-icon">
+                  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l1.9 4.6 4.6 1.9-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z"/>
+                    <path d="M18 16.5l.8 1.9 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8.8-1.9z"/>
+                  </svg>
+                </span>
+                <strong>Trusted Brands</strong>
+                <p>Sika, Crown, Plascon and Basco.</p>
+              </li>
+
+              <li class="hw-hero-feat">
+                <span class="hw-hero-feat-icon">
+                  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 8h11l5 4-5 4H4z"/>
+                    <line x1="4" y1="4" x2="4" y2="20"/>
+                  </svg>
+                </span>
+                <strong>Cut To Size</strong>
+                <p>Timber and boards cut on request.</p>
+              </li>
+
+              <li class="hw-hero-feat">
+                <span class="hw-hero-feat-icon">
+                  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="9.5" r="5.5"/>
+                    <path d="M9 14.5L7.5 21l4.5-2.2L16.5 21 15 14.5"/>
+                  </svg>
+                </span>
+                <strong>Colour Tinting</strong>
+                <p>Any shade mixed while you wait.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hw-hero-media">
+          <div class="hw-hero-collage">
+            <figure class="hw-tile hw-tile-lead">
+              <img src="assets/images/Hardware/hardware-item-1.png" alt="Door handle and fittings stocked at Jambo Wood Works" />
+            </figure>
+            <figure class="hw-tile">
+              <img src="assets/images/Hardware/hardware-item-2.png" alt="Hinges and fixings on a timber board" loading="lazy" />
+            </figure>
+            <figure class="hw-tile">
+              <img src="assets/images/Workshop/workshop-4.jpg" alt="Materials on the shop floor" loading="lazy" />
+            </figure>
+            <figure class="hw-tile">
+              <img src="assets/images/Workshop/workshop-1.jpg" alt="Timber stacked in the yard" loading="lazy" />
+            </figure>
+          </div>
+
+          <blockquote class="hw-hero-quote">
+            <span class="hw-hero-quote-mark" aria-hidden="true">&ldquo;</span>
+            <p data-i18n="hw-quote">Great wood deserves even better hardware.</p>
+            <span class="hw-hero-quote-rule" aria-hidden="true"></span>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Detail strip -->
+      <section class="hw-detail">
+        <div class="hw-detail-inner">
+          <div class="hw-detail-lead">
+            <h2 data-i18n="hw-detail-h">Every detail<br>matters</h2>
+            <p data-i18n="hw-detail-p">Explore our range across the shop floor.</p>
+            <a class="hw-detail-arrow" href="#hw-categories" aria-label="Jump to product categories">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="hw-detail-items">
+            <li class="hw-detail-item">
+              <span class="hw-detail-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2.5" y="6" width="19" height="4" rx="1"/>
+                  <rect x="2.5" y="14" width="19" height="4" rx="1"/>
+                </svg>
+              </span>
+              <strong>Timber &amp; Boards</strong>
+              <p>Softwood, hardwood, MDF and marine ply.</p>
+            </li>
+
+            <li class="hw-detail-item">
+              <span class="hw-detail-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h8v6H6z"/>
+                  <path d="M10 9v4"/>
+                  <rect x="6.5" y="13" width="7" height="8" rx="1.5"/>
+                  <path d="M14 5h3.5a2 2 0 0 1 2 2v3"/>
+                </svg>
+              </span>
+              <strong>Paints &amp; Finishes</strong>
+              <p>Varnishes, stains, sealers and tinting.</p>
+            </li>
+
+            <li class="hw-detail-item">
+              <span class="hw-detail-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 3h4l1 5-3 13-3-13 1-5z"/>
+                  <line x1="9" y1="8" x2="14" y2="8"/>
+                </svg>
+              </span>
+              <strong>Adhesives &amp; Sealants</strong>
+              <p>Contact glue, silicone and bonding agents.</p>
+            </li>
+
+            <li class="hw-detail-item">
+              <span class="hw-detail-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="8" height="8" rx="1"/>
+                  <rect x="13" y="3" width="8" height="8" rx="1"/>
+                  <rect x="3" y="13" width="8" height="8" rx="1"/>
+                  <rect x="13" y="13" width="8" height="8" rx="1"/>
+                </svg>
+              </span>
+              <strong>Tiles &amp; Flooring</strong>
+              <p>Ceramic, porcelain, adhesive and grout.</p>
+            </li>
+
+            <li class="hw-detail-item">
+              <span class="hw-detail-icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 8h6v3a4 4 0 0 0 4 4h6"/>
+                  <rect x="2.5" y="5.5" width="3.5" height="5" rx="1"/>
+                  <rect x="18" y="12.5" width="3.5" height="5" rx="1"/>
+                </svg>
+              </span>
+              <strong>Plumbing</strong>
+              <p>PVC, UPVC, copper, taps and valves.</p>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- Categories grid -->
-      <section class="hw-categories">
+      <section class="hw-categories" id="hw-categories">
         <div class="hw-inner">
           <div class="section-lbl">
             <p class="label" data-i18n="hw-cat-label">Product Categories</p>
@@ -113,100 +265,100 @@
           <div class="hw-grid">
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/hardware-item-1.png" alt="Timber boards" loading="lazy" />
+                <img src="assets/images/Hardware/hardware-item-1.png" alt="Timber boards" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Timber &amp; Boards</h3>
                 <p>Softwood, hardwood, MDF, marine plywood, chipboard, and treated timber. Cut to size on request.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20timber." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20timber." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/cnc-6.jpg" alt="Paints and finishes" loading="lazy" />
+                <img src="assets/images/Cnc/cnc-6.jpg" alt="Paints and finishes" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Paints &amp; Finishes</h3>
                 <p>Crown Paints, Plascon, Basco/Duracoat, Sika waterproofing, varnishes, wood stains and sealers. Computerised colour tinting available.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20paints." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20paints." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/hardware-item-2.png" alt="Adhesives and sealants" loading="lazy" />
+                <img src="assets/images/Hardware/hardware-item-2.png" alt="Adhesives and sealants" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Adhesives &amp; Sealants</h3>
                 <p>Sika, Pidilite Fevicol, Kenya Adhesive Products (Tough Bond, Kenlac), silicone sealants and contact adhesives.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20adhesives." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20adhesives." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/cnc-4.jpg" alt="Steel profiles and profiles" loading="lazy" />
+                <img src="assets/images/Cnc/cnc-4.jpg" alt="Steel profiles and profiles" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Steel Profiles</h3>
                 <p>Square tubes, hollow sections, flat bars, angles and channels for construction and fabrication work.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20steel%20profiles." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20steel%20profiles." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/project-patio.png" alt="Tiles and flooring" loading="lazy" />
+                <img src="assets/images/Projects/project-16.png" alt="Tiles and flooring" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Tiles &amp; Flooring</h3>
                 <p>Ceramic and porcelain wall and floor tiles, tile adhesive, grout and waterproofing membranes.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20tiles." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20tiles." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/workshop-3.jpg" alt="Plumbing materials" loading="lazy" />
+                <img src="assets/images/Workshop/workshop-3.jpg" alt="Plumbing materials" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Plumbing Materials</h3>
                 <p>PVC pipes and fittings, UPVC, copper pipe, taps, valves, and water tanks.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20plumbing%20materials." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20plumbing%20materials." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/hardware-item-2.png" alt="Construction chemicals" loading="lazy" />
+                <img src="assets/images/Hardware/hardware-item-2.png" alt="Construction chemicals" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Construction Chemicals</h3>
                 <p>Sika waterproofing, concrete additives, grout, tile adhesives, damp proofing and expansion joint fillers.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20construction%20chemicals." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20construction%20chemicals." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/cnc-7.jpg" alt="PPE safety equipment" loading="lazy" />
+                <img src="assets/images/Cnc/cnc-7.jpg" alt="PPE safety equipment" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>PPE &amp; Safety</h3>
                 <p>Hard hats, safety boots, gloves, high-visibility vests, goggles, dust masks and ear protection.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20PPE." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20PPE." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
 
             <div class="hw-card">
               <div class="hw-card-img">
-                <img src="assets/images/workshop-1.jpg" alt="Hardware fittings" loading="lazy" />
+                <img src="assets/images/Workshop/workshop-1.jpg" alt="Hardware fittings" loading="lazy" />
               </div>
               <div class="hw-card-body">
                 <h3>Fittings &amp; Fasteners</h3>
                 <p>Door hinges, locks, handles, screws, bolts, nails, anchor bolts, cabinet hardware and drawer runners.</p>
-                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20fittings." target="_blank" rel="noreferrer">Enquire →</a>
+                <a class="hw-enquire" href="https://wa.me/message/P3MMDNBS5KIHO1?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20fittings." target="_blank" rel="noreferrer">Enquire ?</a>
               </div>
             </div>
           </div>
@@ -218,12 +370,12 @@
         <div class="hw-inner">
           <p class="label" data-i18n="hw-brands-label">Brands We Stock</p>
           <div class="hw-brand-logos">
-            <img src="assets/images/logo-sika.png" alt="Sika" />
-            <img src="assets/images/logo-pidilite.png" alt="Pidilite" />
-            <img src="assets/images/logo-crown.jpg" alt="Crown Paints" />
-            <img src="assets/images/logo-plascon.png" alt="Plascon" />
-            <img src="assets/images/logo-basco.png" alt="Basco Paints" />
-            <img src="assets/images/logo-kenya-adhesive.jpg" alt="Kenya Adhesive Products" />
+            <img src="assets/images/Logo/logo-sika.png" alt="Sika" />
+            <img src="assets/images/Logo/logo-pidilite.png" alt="Pidilite" />
+            <img src="assets/images/Logo/logo-crown.jpg" alt="Crown Paints" />
+            <img src="assets/images/Logo/logo-plascon.png" alt="Plascon" />
+            <img src="assets/images/Logo/logo-basco.png" alt="Basco Paints" />
+            <img src="assets/images/Logo/logo-kenya-adhesive.jpg" alt="Kenya Adhesive Products" />
           </div>
         </div>
       </section>
@@ -245,7 +397,7 @@
       <div class="footer-inner">
         <div class="footer-brand-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" />
+            <img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" />
             <span><strong>Jambo Wood Works Ltd</strong><small>Est. 1984</small></span>
           </a>
           <p>We've been doing woodwork and selling hardware in Kongowea, Mombasa since 1984.</p>
@@ -254,7 +406,7 @@
           <h4>Navigate</h4>
           <a href="index.html">Home</a>
           <a href="hardware.html">Hardware</a>
-          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           </div>
@@ -286,7 +438,7 @@
     </button>
 
 
-    <script src="assets/js/main.js?v=6" defer></script>
+    <script src="assets/js/main.js?v=28" defer></script>
   </body>
 </html>
 

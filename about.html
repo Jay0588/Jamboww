@@ -1,45 +1,49 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="About Jambo Wood Works Ltd — family business since 1984 in Kongowea, Mombasa. Joinery, hardware, CNC routing and paint tinting." />
-    <link rel="icon" type="image/png" href="assets/images/jambo-logo-2024.png" />
+    <link rel="icon" type="image/png" href="assets/images/Logo/jambo-logo-2024.png" />
     <title>About Us | Jambo Wood Works Ltd — Kongowea, Mombasa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,500;1,400;1,500&family=Dancing+Script:wght@500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <!-- Sitemap reference -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <!-- Google Analytics — replace GA_MEASUREMENT_ID with your ID e.g. G-XXXXXXXXXX -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","GA_MEASUREMENT_ID");</script> -->
-    <link rel="stylesheet" href="assets/css/styles.css?v=6" />
-    <link rel="stylesheet" href="assets/css/pages.css?v=6" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=28" />
+    <link rel="stylesheet" href="assets/css/pages.css?v=28" />
   </head>
   <body>
 
     <header class="site-header" data-header>
       <a class="brand" href="index.html" aria-label="Jambo Wood Works Ltd home">
-        <span class="brand-logo-wrap"><img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" /></span>
+        <span class="brand-logo-wrap"><img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" /></span>
         <span class="brand-text"><strong>Jambo Wood Works</strong><small>Est. 1984 · Mombasa</small></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="hardware.html">Hardware</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="hardware.html" data-i18n="nav-hardware">Hardware</a>
+        <a href="gallery.html" data-i18n="nav-projects">Gallery</a>
         <a href="about.html" class="active">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
       </nav>
       <div class="nav-right">
-
         <div class="nav-translate" data-translate-wrap>
-          <button class="nav-translate-btn" data-translate-toggle aria-label="Translate to Swahili">
-            <svg class="tl-gt-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" fill="currentColor"/></svg>
-            <span class="tl-btn-target" data-translate-target>SWAHILI</span>
+          <button class="nav-translate-btn" data-translate-toggle aria-label="Translate">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span data-translate-target>EN</span>
+            <svg class="tl-btn-chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
+          <div class="nav-translate-dropdown" data-translate-dropdown hidden>
+            <button class="tl-opt tl-active" data-lang="en"><span class="tl-flag">🇬🇧</span><span class="tl-name">English</span><span class="tl-code">EN</span></button>
+            <button class="tl-opt" data-lang="sw"><span class="tl-flag">🇰🇪</span><span class="tl-name">Kiswahili</span><span class="tl-code">SWA</span></button>
+          </div>
         </div>
-        <a class="nav-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer">Get a Quote</a>
+        <a class="nav-cta" href="https://wa.me/message/P3MMDNBS5KIHO1" target="_blank" rel="noreferrer" data-i18n="nav-cta">Get a Quote</a>
       </div>
       <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false">
         <span></span><span></span>
@@ -53,7 +57,7 @@
       <!-- Top bar: brand left, close right -->
       <div class="mm-top">
         <a class="mm-brand" href="index.html">
-          <img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works" />
+          <img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works" />
           <div>
             <strong>Jambo Wood Works</strong>
             <small>Est. 1984 · Mombasa</small>
@@ -77,7 +81,7 @@
       <nav class="mm-nav" aria-label="Mobile navigation">
         <a href="index.html" data-i18n="nav-home">Home</a>
         <a href="hardware.html" data-i18n="nav-hardware">Hardware</a>
-        <a href="projects.html" data-i18n="nav-projects">Projects</a>
+        <a href="gallery.html" data-i18n="nav-projects">Gallery</a>
         <a class="active" href="about.html">About</a>
         <a href="contact.html" data-i18n="nav-contact">Contact</a>
       </nav>
@@ -92,12 +96,124 @@
     <main>
 
       <!-- Page hero -->
-      <section class="page-hero" style="background-image:url('assets/images/workshop-1.jpg">
-        <div class="page-hero-overlay"></div>
-        <div class="page-hero-inner">
-          <p class="label label-light" data-i18n="ab-label">About Us</p>
-          <h1 data-i18n="ab-h1">Family business.<br>40 years in.</h1>
-          <p data-i18n="ab-hero-p">Started in 1984, still in Kongowea, still the same family. We do joinery, hardware supply, CNC routing and paint tinting under one roof.</p>
+      <section class="about-hero">
+        <div class="about-hero-copy-wrap">
+          <div class="about-hero-copy">
+            <p class="about-hero-label" data-i18n="ab-label">Our Story</p>
+            <h1 class="about-hero-title" data-i18n="ab-h1">Built on passion.<br><em>Driven by purpose.</em></h1>
+            <span class="about-hero-rule" aria-hidden="true"></span>
+            <p class="about-hero-lead" data-i18n="ab-hero-p">Jambo Wood Works started in 1984 with a simple belief &ndash; good work, honest service, and happy customers. From a small workshop in Mombasa, we&rsquo;ve grown through the trust of generations.</p>
+
+            <dl class="about-hero-stats">
+              <div class="about-hero-stat">
+                <span class="about-hero-stat-icon">
+                  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/>
+                    <circle cx="10" cy="8" r="3.2"/>
+                    <path d="M20 20v-1.5a3.5 3.5 0 0 0-2.6-3.4"/>
+                    <path d="M15.5 5.2a3.2 3.2 0 0 1 0 5.6"/>
+                  </svg>
+                </span>
+                <dt>40+</dt>
+                <dd data-i18n="ab-stat1-lbl">Years of<br>Experience</dd>
+              </div>
+
+              <div class="about-hero-stat">
+                <span class="about-hero-stat-icon">
+                  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3l7 3v5.5c0 4.2-2.9 7.6-7 8.5-4.1-.9-7-4.3-7-8.5V6l7-3z"/>
+                    <polyline points="9 11.5 11.2 13.7 15.2 9.7"/>
+                  </svg>
+                </span>
+                <dt>1000+</dt>
+                <dd data-i18n="ab-stat2-lbl">Happy<br>Customers</dd>
+              </div>
+
+              <div class="about-hero-stat">
+                <span class="about-hero-stat-icon">
+                  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13.5 3.5l3 3-2 2-3-3z"/>
+                    <path d="M11.5 5.5L4 13v3.5h3.5L15 9"/>
+                    <line x1="14" y1="17" x2="20" y2="17"/>
+                  </svg>
+                </span>
+                <dt>2000+</dt>
+                <dd data-i18n="ab-stat3-lbl">Projects<br>Completed</dd>
+              </div>
+
+              <div class="about-hero-stat">
+                <span class="about-hero-stat-icon">
+                  <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.4">
+                    <circle cx="12" cy="12" r="9.2"/>
+                    <circle cx="12" cy="12" r="6.4"/>
+                    <circle cx="12" cy="12" r="3.6"/>
+                    <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <dt>One</dt>
+                <dd data-i18n="ab-stat4-lbl">Promise of<br>Quality</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="about-hero-media">
+          <!-- To use a different photo, drop it in assets/images/Workshop/ and swap the src. -->
+          <img src="assets/images/Workshop/about-workshop.png" alt="Timber plank resting in the Jambo Wood Works workshop" />
+        </div>
+
+        <!-- Journey + values band -->
+        <div class="about-band">
+          <div class="about-band-inner">
+            <div class="about-journey">
+              <p class="about-band-label" data-i18n="ab-journey-label">Our Journey</p>
+              <ol class="about-timeline">
+                <li class="about-milestone">
+                  <span class="about-milestone-dot" aria-hidden="true"></span>
+                  <span class="about-milestone-year">1984</span>
+                  <h3>Humble<br>Beginnings</h3>
+                  <p>Started as a small family workshop in Mombasa.</p>
+                </li>
+                <li class="about-milestone">
+                  <span class="about-milestone-dot" aria-hidden="true"></span>
+                  <span class="about-milestone-year">1995</span>
+                  <h3>Growing<br>Trust</h3>
+                  <p>Built a reputation for quality and reliability.</p>
+                </li>
+                <li class="about-milestone">
+                  <span class="about-milestone-dot" aria-hidden="true"></span>
+                  <span class="about-milestone-year">2005</span>
+                  <h3>Expanding<br>Horizons</h3>
+                  <p>Brought in better tools, skilled hands and new ideas.</p>
+                </li>
+                <li class="about-milestone">
+                  <span class="about-milestone-dot" aria-hidden="true"></span>
+                  <span class="about-milestone-year">Today</span>
+                  <h3>Still the<br>Same Promise</h3>
+                  <p>Better every day, with the same values we began with.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="about-values">
+              <span class="about-values-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2">
+                  <circle cx="12" cy="12" r="10.4"/>
+                  <circle cx="12" cy="12" r="7.8"/>
+                  <circle cx="12" cy="12" r="5.2"/>
+                  <circle cx="12" cy="12" r="2.6"/>
+                  <circle cx="12" cy="12" r="0.9" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <div class="about-values-body">
+                <p class="about-band-label" data-i18n="ab-values-label">Our Values</p>
+                <h3 data-i18n="ab-values-h">Honesty. Quality. Respect.</h3>
+                <p data-i18n="ab-values-p">We believe in doing things the right way &mdash; using good materials, skilled craftsmanship, and treating every customer like family. That&rsquo;s what has kept us going for over 40 years.</p>
+                <p class="about-values-sign" data-i18n="ab-values-sign">The Jambo Family</p>
+              </div>
+              <span class="about-values-rings" aria-hidden="true"></span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,20 +228,20 @@
             <p>We're on <strong>Main Nyali Road / Fidel Odinga Road, Kongowea, Mombasa</strong> — just before the entrance of Kongowea Market, opposite AON Minet Insurance and First Assurance Co Ltd.</p>
 
             <div class="about-award about-page-award">
-              <img src="assets/images/kncci.jpg" alt="KNCCI logo" class="about-award-logo" />
+              <img src="assets/images/Logo/kncci.jpg" alt="KNCCI logo" class="about-award-logo" />
               <div class="about-award-text">
                 <strong>2025 KNCCI Award Winners</strong>
-                <span>Best Use of Technology — Kenya National Chamber of Commerce &amp; Industry</span>
+                <span>Best Use of Technology · Kenya National Chamber of Commerce &amp; Industry</span>
               </div>
             </div>
           </div>
 
           <div class="about-page-imgs">
             <div class="about-page-img-main">
-              <img src="assets/images/workshop-2.jpg" alt="Jambo Wood Works workshop interior" loading="lazy" />
+              <img src="assets/images/Workshop/workshop-2.jpg" alt="Jambo Wood Works workshop interior" loading="lazy" />
             </div>
             <div class="about-page-img-secondary">
-              <img src="assets/images/workshop-3.jpg" alt="Timber and materials in stock" loading="lazy" />
+              <img src="assets/images/Workshop/workshop-3.jpg" alt="Timber and materials in stock" loading="lazy" />
             </div>
           </div>
         </div>
@@ -138,42 +254,42 @@
           <h2 data-i18n="ab-svc-h2">Services under one roof.</h2>
           <div class="about-svc-list">
             <div class="about-svc-item">
-              <div class="about-svc-icon">🪚</div>
+              <div class="about-svc-icon" aria-hidden="true">🪚</div>
               <div>
                 <h3>All Carpentry &amp; Joinery</h3>
                 <p>Doors, windows, wardrobes, kitchen installations, attic renovations, handmade furniture, and complete refurbishments — internal and external.</p>
               </div>
             </div>
             <div class="about-svc-item">
-              <div class="about-svc-icon">🏪</div>
+              <div class="about-svc-icon" aria-hidden="true">🧱</div>
               <div>
                 <h3>Wholesale &amp; Retail Hardware</h3>
                 <p>Timber, steel profiles, paints, plumbing materials, tiles, adhesives, construction chemicals, waterproofing, PPE and more.</p>
               </div>
             </div>
             <div class="about-svc-item">
-              <div class="about-svc-icon">⚙️</div>
+              <div class="about-svc-icon" aria-hidden="true">⚙</div>
               <div>
                 <h3>CNC Routing</h3>
                 <p>Precision cutting for decorative panels, signage, furniture components and custom shapes.</p>
               </div>
             </div>
             <div class="about-svc-item">
-              <div class="about-svc-icon">🎨</div>
+              <div class="about-svc-icon" aria-hidden="true">🎨</div>
               <div>
                 <h3>Computerised Paint Tinting</h3>
                 <p>Any colour matched on the spot — bring a chip, a photo, or a RAL code and we'll mix it.</p>
               </div>
             </div>
             <div class="about-svc-item">
-              <div class="about-svc-icon">🚚</div>
+              <div class="about-svc-icon" aria-hidden="true">🚛</div>
               <div>
                 <h3>Free Delivery</h3>
                 <p>Free delivery on custom woodwork products to all major cities in Kenya.</p>
               </div>
             </div>
             <div class="about-svc-item">
-              <div class="about-svc-icon">📐</div>
+              <div class="about-svc-icon" aria-hidden="true">📍</div>
               <div>
                 <h3>Site Visits</h3>
                 <p>We come to your site, measure, advise, and quote — no charge.</p>
@@ -212,7 +328,7 @@
       <div class="footer-inner">
         <div class="footer-brand-col">
           <a class="footer-brand" href="index.html">
-            <img src="assets/images/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" />
+            <img src="assets/images/Logo/jambo-logo-2024.png" alt="Jambo Wood Works Ltd" />
             <span><strong>Jambo Wood Works Ltd</strong><small>Est. 1984</small></span>
           </a>
           <p>We've been doing woodwork and selling hardware in Kongowea, Mombasa since 1984.</p>
@@ -221,7 +337,7 @@
           <h4>Navigate</h4>
           <a href="index.html">Home</a>
           <a href="hardware.html">Hardware</a>
-          <a href="projects.html">Projects</a>
+          <a href="gallery.html">Gallery</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
           </div>
@@ -253,7 +369,7 @@
     </button>
 
 
-    <script src="assets/js/main.js?v=6" defer></script>
+    <script src="assets/js/main.js?v=28" defer></script>
   </body>
 </html>
 
